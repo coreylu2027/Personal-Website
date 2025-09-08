@@ -1,8 +1,18 @@
 @charset "UTF-8";
 
+/*#222E50 #007991 #439A86 #BCD8C1 #E9D985*/
+
+:root {
+    font-family: "Hepta Slab", serif;
+    --clr-space-cadet: #222E50;
+    --clr-cerulean: #007991;
+    --clr-zomp: #439A86;
+    --clr-celadon: #BCD8C1;
+    --clr-flax: #E9D985;
+}
+
 /*https://fonts.google.com/specimen/Hepta+Slab*/
 .hepta-slab {
-    font-family: "Hepta Slab", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -11,62 +21,56 @@
 h1 {
     text-align: center;
     font-size: 2.5em;
-    font-family: "Hepta Slab", serif
 }
 
-p {
-    font-family: "Hepta Slab", serif
-}
-
-.blackBorder {
+.black-border {
     border-style: solid;
     border-width: 3px;
-    border-color: black;
+    border-color: var(--clr-space-cadet);
     border-radius: 5px;
 }
 
-.widthSm {
+.width-sm {
     width: 20%;
 }
 
-.widthMed {
+.width-med {
     width: 50%
 }
 
-.floatRight {
+.float-right {
     float: right;
 }
 
-.clearfix {
+.clear-fix {
     overflow: auto;
 }
 
-.topNav {
-    background-color: slategray;
+.top-nav {
+    background-color: var(--clr-space-cadet);
     overflow: hidden;
 }
 
-.topNav a {
+.top-nav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    font-family: "Hepta Slab", serif
 }
 
-.topNav a:hover {
-    background-color: lightgray;
+.top-nav a:hover {
+    background-color: var(--clr-flax);
     color: black;
 }
 
-.topNav a.active {
-    background-color: dodgerblue;
+.top-nav a.active {
+    background-color: var(--clr-cerulean);
     color: white;
 }
 
-.centerImage {
+.center-image {
     display: flex;
     justify-content: center;
     align-items: center;
