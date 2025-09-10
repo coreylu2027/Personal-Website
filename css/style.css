@@ -46,7 +46,7 @@ html, body {
 
 /* Container and flow spacing (https://www.w3schools.com/howto/howto_css_center-website.asp) */
 .container {
-    margin-top: 15px;
+    margin-top: var(--space-lg);
     width: min(1100px, 92%);
     margin-inline: auto;
 }
