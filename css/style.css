@@ -1,90 +1,241 @@
 @charset "UTF-8";
 
-/*#222E50 #007991 #439A86 #BCD8C1 #E9D985*/
+body {
+    font-family: "Hepta Slab", serif;
+}
+
+/* Layout foundation (inspired by W3Schools: Box Sizing, Responsive Web Design, Flexbox/Grid) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* https://www.w3schools.com/css/css3_box-sizing.asp */
+}
 
 :root {
-    font-family: "Hepta Slab", serif;
+    --bg: #ffffff;
+    --text: #222;
+    --muted: #667085;
+    --brand: #0f62fe;
+    --surface: #f7f7f9;
+    --border: #e4e6eb;
     --clr-space-cadet: #222E50;
     --clr-cerulean: #007991;
     --clr-zomp: #439A86;
     --clr-celadon: #BCD8C1;
     --clr-flax: #E9D985;
+
+    --radius: 12px;
+    --space-xs: .5rem;
+    --space-sm: .75rem;
+    --space: 1rem;
+    --space-md: 1.25rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .06);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, .08);
 }
 
-/*https://fonts.google.com/specimen/Hepta+Slab*/
-.hepta-slab {
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
 }
 
-h1 {
-    text-align: center;
-    font-size: 2.5em;
+/* Container and flow spacing (https://www.w3schools.com/howto/howto_css_center-website.asp) */
+.container {
+    margin-top: 15px;
+    width: min(1100px, 92%);
+    margin-inline: auto;
 }
 
-.black-border {
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--clr-space-cadet);
-    border-radius: 5px;
+.flow > * + * {
+    margin-top: var(--space-lg);
 }
 
-.width-sm {
-    width: 20%;
-}
-
-.width-30 {
-    width: 30%;
-}
-
-.width-med {
-    width: 50%
-}
-
-.float-right {
-    float: right;
-}
-
-.clear-fix {
-    overflow: auto;
-}
-
+/* Top navigation: sticky and responsive (https://www.w3schools.com/howto/howto_js_navbar_sticky.asp) */
 .top-nav {
-    background-color: var(--clr-space-cadet);
-    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex; /* https://www.w3schools.com/css/css3_flexbox.asp */
+    gap: .5rem;
+    align-items: center;
+    padding: .75rem 1rem;
+    background: var(--clr-space-cadet);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .top-nav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 17px;
+    padding: .5rem .75rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    opacity: .85;
 }
 
-.top-nav a:hover {
-    background-color: var(--clr-flax);
-    color: black;
+.top-nav a:hover,
+.top-nav a:focus {
+    background: var(--clr-flax);
+    color: var(--text);
+    opacity: 1;
 }
 
 .top-nav a.active {
-    background-color: var(--clr-cerulean);
-    color: white;
+    background: var(--clr-cerulean);
+    color: #ffffff;
+    font-weight: 700;
 }
 
-.center-image {
-    display: flex;
-    justify-content: center;
+/* Hero section */
+.hero {
+    background: linear-gradient(180deg, #f5f7ff, #ffffff);
+    border-bottom: 1px solid var(--border);
+}
+
+.hero__content {
+    display: grid; /* https://www.w3schools.com/css/css_grid.asp */
+    grid-template-columns: 1.2fr .8fr;
+    gap: var(--space-lg);
     align-items: center;
+    padding: var(--space-xl) 0;
 }
 
-.uc {
-    width: 50%;
-    height: 50%;
+.page-title {
+    margin: 0 0 var(--space-sm);
+    font-size: clamp(1.75rem, 2.5vw + 1rem, 2.75rem); /* https://www.w3schools.com/cssref/func_clamp.php */
 }
 
-.padding {
-    padding: 10px;
+.lead {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 60ch;
+}
+
+.hero__figure {
+    margin: 0;
+    justify-self: end;
+}
+
+.hero__img {
+    width: 320px;
+    max-width: 100%;
+    aspect-ratio: 4/3; /* https://www.w3schools.com/cssref/css3_pr_aspect-ratio.php */
+    object-fit: cover; /* https://www.w3schools.com/cssref/css3_pr_object-fit.php */
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+/* Accessibility helper */
+.sr-only {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Cards and content blocks */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    height: 100%;              /* make cards fill their grid cell */
+    display: flex;             /* optional: consistent vertical layout inside */
+    flex-direction: column;    /* optional: stack content */
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+}
+
+/* Media block */
+.media {
+    margin: 0 0 var(--space-sm);
+}
+
+.media__img {
+    width: 100%;
+    height: auto; /* https://www.w3schools.com/howto/howto_css_responsive_images.asp */
+    border-radius: var(--radius);
+    display: block;
+}
+
+.media__caption {
+    margin-top: var(--space-xs);
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+/* Grid utilities */
+.grid-two {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.gap-lg {
+    gap: var(--space-lg);
+}
+
+.align-start {
+    align-items: start;
+}
+
+/* Photo gallery using CSS Grid (https://www.w3schools.com/css/css_grid.asp) */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space);
+}
+
+.photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 2px);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    display: block;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg) 0;
+    border-top: 1px solid var(--border);
+    background: #fafafa;
+}
+
+/* Text helpers */
+.small {
+    font-size: .925rem;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* Responsive adjustments (https://www.w3schools.com/css/css_rwd_mediaqueries.asp) */
+@media (min-width: 720px) {
+    .grid-two {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .photo-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
