@@ -222,6 +222,25 @@ html, body {
     color: var(--muted);
 }
 
+/*Carousel wrapper*/
+.carousel {
+    width: 100%; /* full width of container */
+    max-width: 800px; /* Optional max width */
+    overflow: hidden; /* hide overflowing slide */
+    margin: auto; /* carousel is center */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease; /* smooth sliding animation over half a second */
+}
+
+.slides img {
+    width: 100%;
+    margin: auto;
+    flex-shrink: 0;
+}
+
 /* Responsive adjustments (https://www.w3schools.com/css/css_rwd_mediaqueries.asp) */
 @media (min-width: 720px) {
     .grid-two {
