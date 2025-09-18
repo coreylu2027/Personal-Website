@@ -65,7 +65,6 @@ html, body {
     padding: .75rem 1rem;
     background: var(--clr-space-cadet);
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 .top-nav a {
@@ -77,8 +76,7 @@ html, body {
     opacity: .85;
 }
 
-.top-nav a:hover,
-.top-nav a:focus {
+.top-nav a:hover {
     background: var(--clr-flax);
     color: var(--text);
     opacity: 1;
@@ -129,16 +127,6 @@ html, body {
     box-shadow: var(--shadow-md);
 }
 
-/* Accessibility helper */
-.sr-only {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
-}
-
 /* Cards and content blocks */
 .card {
     background: var(--surface);
@@ -146,9 +134,9 @@ html, body {
     border-radius: var(--radius);
     padding: var(--space-lg);
     box-shadow: var(--shadow-sm);
-    height: 100%;              /* make cards fill their grid cell */
-    display: flex;             /* optional: consistent vertical layout inside */
-    flex-direction: column;    /* optional: stack content */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .card h2 {
@@ -222,27 +210,8 @@ html, body {
     color: var(--muted);
 }
 
-/*Carousel wrapper*/
-.carousel {
-    width: 100%; /* full width of container */
-    max-width: 800px; /* Optional max width */
-    overflow: hidden; /* hide overflowing slide */
-    margin: auto; /* carousel is center */
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease; /* smooth sliding animation over half a second */
-}
-
-.slides img {
-    width: 100%;
-    margin: auto;
-    flex-shrink: 0;
-}
-
 /* Responsive adjustments (https://www.w3schools.com/css/css_rwd_mediaqueries.asp) */
-@media (min-width: 720px) {
+@media (min-width: 840px) {
     .grid-two {
         grid-template-columns: 1fr 1fr;
     }
