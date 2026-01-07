@@ -227,13 +227,6 @@ html, body {
     }
 }
 
-/* ------------------------------
-   Course pages (math/hum/phys/cs/etc.)
-   Works with: <main class="course-page">,
-   <section class="course-description">, <section class="assignment">,
-   <p class="assignment-description">, and embedded <iframe>
------------------------------- */
-
 .course-page {
     width: min(900px, 92%);
     margin: var(--space-xl) auto;
