@@ -7,7 +7,9 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
 <div class="top-nav">
   <a href="index.html">Home</a>
   <a class="active" href="math.html">Math</a>
@@ -18,17 +20,75 @@
   <a href="stemI.html">STEM I</a>
   <a href="stemII.html">STEM II</a>
 </div>
-<div class="container">
-  <div aria-labelledby="page-title" class="card flow">
-    <h1 id="page-title">Math</h1>
-    <p class="small muted">This page is under construction. Check back soon for project write-ups, photos, and
-      resources.</p>
-    <div class="center-image">
-      <!-- photo from adobe stock-->
-      <img alt="page is under construction" class="uc" src="images/under_construction.jpg">
-    </div>
-    <p><a href="index.html">← Back to Home</a></p>
-  </div>
-</div>
+
+<main class="course-page">
+
+  <!-- Course Description -->
+  <section class="course-description">
+    <h1>Mathematics</h1>
+    <p>
+      Math Modeling, taught by Ms. Durost, is a problem-centered course, focusing on understanding how mathematics
+      analyzes, explains, and models real-world situations. It emphasizes deep thinking, collaboration, and
+      perseverance, encouraging us to explore unfamiliar problems, make conjectures, justify reasoning, and communicate
+      ideas verbally and in writing. Learning occurs through extended problems, discussions, and group work, aiming to
+      understand solution validity and relevance.
+    </p>
+  </section>
+
+  <!-- Assignment 1 -->
+  <section class="assignment">
+    <h2>Practice HiMCM</h2>
+    <p class="assignment-description">
+      This assignment was a large-scale mathematical modeling project based on a real-world triathlon planning problem,
+      where the goal was to design a race schedule that minimized course congestion while keeping road closures under a
+      strict 5.5-hour limit. Using a provided data set from a previous triathlon, we analyzed participant speeds, ages,
+      genders, and racing statuses to create an optimized wave system that balanced fairness, safety, and efficiency.
+      Our solution grouped athletes into waves based on status, gender, and age, scheduled starts at five-minute
+      intervals, and modeled athlete movement at constant speeds to estimate congestion along the bike and run courses.
+      We also tested how changing race distances and wave spacing affected congestion and closure time, ultimately
+      showing that wave organization was the most effective control. The final deliverable included a full technical
+      report, data visualizations, and a non-technical letter to the mayor explaining why the proposed schedule would
+      ensure a smooth, world-class event while meeting community constraints.
+    </p>
+
+    <!-- PDF -->
+    <iframe
+            height="600"
+            src="docs/practice_himcm.pdf"
+            title="Practice HiMCM PDF"
+            width="100%">
+    </iframe>
+
+    <!-- Optional download link -->
+    <p>
+      <a href="docs/practice_himcm.pdf" target="_blank">Download PDF</a>
+    </p>
+  </section>
+
+  <!-- Assignment 2 -->
+  <section class="assignment">
+    <h2>Modeling the Future Challenge Project Proposal</h2>
+    <p class="assignment-description">
+      The Modeling the Future Challenge (MTFC) is a national, actuarial-style competition where students use math, data, and risk analysis to study real-world problems and propose strategies to reduce future risk. Instead of solving a single equation, teams follow an actuarial process: defining a problem, identifying risks, analyzing data, building models, and making practical recommendations for individuals, industries, and governments.
+    </p>
+    <p class="assignment-description">
+      For MTFC, my team’s project focuses on coral reef degradation in tropical climates and the risks it poses to ecosystems, coastal communities, and global markets. Our proposal models how rising ocean temperatures, climate-driven storms, and pollution contribute to coral loss, and how that loss affects fish populations, tourism, food supply, and coastal protection. Using environmental and socioeconomic data, we aim to predict future reef decline and evaluate mitigation strategies such as mineral sunscreen policies, artificial fish habitats, wave-energy–absorbing structures, and insurance “safety nets” for fishermen. The project ultimately proposes data-driven recommendations to reduce environmental damage while protecting vulnerable communities and economies that depend on healthy coral reefs.
+    </p>
+    <!-- PDF -->
+    <iframe
+            height="600"
+            src="docs/mtfc_project_proposal.pdf"
+            title="MTFC Project Proposal PDF"
+            width="100%">
+    </iframe>
+
+    <!-- Optional download link -->
+    <p>
+      <a href="docs/mtfc_project_proposal.pdf" target="_blank">Download PDF</a>
+    </p>
+  </section>
+
+</main>
+
 </body>
 </html>
