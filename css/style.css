@@ -228,13 +228,14 @@ html, body {
 }
 
 .course-page {
-    width: min(900px, 92%);
-    margin: var(--space-xl) auto;
-    padding: 0 0 calc(var(--space-xl) + var(--space));
+
+
 }
 
 .course-description {
     margin-bottom: var(--space-xl);
+    width: min(900px, 92%);
+    margin: var(--space-xl) auto;
 }
 
 .course-description h1 {
@@ -254,6 +255,8 @@ html, body {
     border-radius: var(--radius);
     padding: var(--space-lg);
     box-shadow: var(--shadow-sm);
+    width: min(900px, 92%);
+    margin: var(--space-xl) auto;
 }
 
 .assignment + .assignment {
