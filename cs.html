@@ -18,17 +18,64 @@
   <a href="stemI.html">STEM I</a>
   <a href="stemII.html">STEM II</a>
 </div>
-<div class="container">
-  <div aria-labelledby="page-title" class="card flow">
-    <h1 id="page-title">Computer Science</h1>
-    <p class="small muted">This page is under construction. Check back soon for project write-ups, photos, and
-      resources.</p>
-    <div class="center-image">
-      <!-- photo from adobe stock-->
-      <img alt="page is under construction" class="uc" src="images/under_construction.jpg">
-    </div>
-    <p><a href="index.html">← Back to Home</a></p>
+<div class="course-page">
+
+  <div class="course-description">
+    <h1>Computer Science</h1>
+    <p>
+      Mrs. Taricco teaches Advanced Computer Science. This is a course that focuses on both programming and real-world
+      software development. The class starts with web design using HTML and CSS, where I build and maintain a personal
+      and professional website, and then moves into object-oriented programming in Java. Throughout the year, we learn
+      core computer science concepts. The course emphasizes problem-solving, collaboration, and writing efficient,
+      well-structured code, and it includes major projects such as developing a mobile app to address a real community
+      need.
+    </p>
   </div>
+
+  <div class="assignment">
+    <h2>Binary Counting</h2>
+    <p class="assignment-description">
+      This assignment was an ACSL “Binary Counting” challenge where you start with a normal text string, convert every
+      character into its 8-bit ASCII binary, smash it all into one huge binary string, and then repeatedly delete the
+      counting sequence (0, 1, 10, 11, 100, …) by searching from the front and then the back each time until you hit a
+      number that can’t be found anymore. After that, you convert whatever binary is left into octal (no leading zeros)
+      and repeat the same deletion process in base 8 (0, 1, 2, …, 7, 10, 11, …), and the final output is the last octal
+      number you were able to delete (converted to base 10), or -1 if you can’t even delete 0.
+    </p>
+
+    <div class="doc-frame">
+      <iframe src="docs/binary_counting.pdf" title="Binary Counting Problem PDF"></iframe>
+      <div class="doc-actions">
+        <a class="btn-link" href="docs/binary_counting.pdf" rel="noopener" target="_blank">Open / Download PDF</a>
+      </div>
+    </div>
+    <div class="doc-frame">
+      <iframe src="docs/acsl.pdf" title="Binary Counting Solution PDF"></iframe>
+      <div class="doc-actions">
+        <a class="btn-link" href="docs/acsl.pdf" rel="noopener" target="_blank">Open / Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="assignment">
+    <h2>Dynamics Lab</h2>
+    <p class="assignment-description">
+      This dynamics lab investigated Newton’s Second Law by determining the force produced by a fan in a modified
+      Atwood’s machine. By transferring mass between the cart and the hanging weight while keeping the total system mass
+      constant, we measured how acceleration changed with hanging mass and tested whether the relationship was linear.
+      Using free-body diagrams, experimental data, and a best-fit line, we compared theoretical and experimental results
+      to evaluate the fan’s force and identify sources of error such as friction and thrust variability.
+    </p>
+
+    <div class="doc-frame">
+      <iframe src="docs/dynamics_lab.pdf" title="Dynamics Lab PDF"></iframe>
+      <div class="doc-actions">
+        <a class="btn-link" href="docs/dynamics_lab.pdf" rel="noopener" target="_blank">Open / Download PDF</a>
+      </div>
+    </div>
+  </div>
+
 </div>
+
 </body>
 </html>
