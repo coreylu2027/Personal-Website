@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
 <!--
 This site was made with the help of https://www.w3schools.com
 <a> target attributes came from https://www.w3schools.com/tags/att_a_target.asp
 <iframe> pdfs came from https://www.w3schools.com/tags/att_iframe_src.asp
 -->
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Math</title>
@@ -24,8 +25,9 @@ This site was made with the help of https://www.w3schools.com
   <a href="stemII.html">STEM II</a>
 </div>
 
-<main class="course-page">
-  <section class="course-description">
+<div class="course-page">
+
+  <div class="course-description">
     <h1>Math Modeling</h1>
     <p>
       Math Modeling, taught by Ms. Durost, is a problem-centered course, focusing on understanding how mathematics
@@ -34,9 +36,9 @@ This site was made with the help of https://www.w3schools.com
       ideas verbally and in writing. Learning occurs through extended problems, discussions, and group work, aiming to
       understand solution validity and relevance.
     </p>
-  </section>
+  </div>
 
-  <section class="assignment">
+  <div class="assignment">
     <h2>Practice HiMCM</h2>
     <p class="assignment-description">
       This assignment was a large-scale mathematical modeling project based on a real-world triathlon planning problem,
@@ -51,25 +53,24 @@ This site was made with the help of https://www.w3schools.com
       ensure a smooth, world-class event while meeting community constraints.
     </p>
 
-    <iframe
-            height="600"
-            src="docs/practice_himcm.pdf"
-            title="Practice HiMCM PDF"
-            width="100%">
-    </iframe>
-    <p>
-      <a href="docs/practice_himcm.pdf" target="_blank">Download PDF</a>
-    </p>
-  </section>
+    <div class="doc-frame">
+      <iframe src="docs/practice_himcm.pdf" title="Practice HiMCM PDF"></iframe>
+      <div class="doc-actions">
+        <a class="btn-link" href="docs/practice_himcm.pdf" target="_blank" rel="noopener">Open / Download PDF</a>
+      </div>
+    </div>
+  </div>
 
-  <section class="assignment">
+  <div class="assignment">
     <h2>Modeling the Future Challenge Project Proposal</h2>
+
     <p class="assignment-description">
       The Modeling the Future Challenge (MTFC) is a national, actuarial-style competition where students use math, data,
       and risk analysis to study real-world problems and propose strategies to reduce future risk. Instead of solving a
       single equation, teams follow an actuarial process: defining a problem, identifying risks, analyzing data,
       building models, and making practical recommendations for individuals, industries, and governments.
     </p>
+
     <p class="assignment-description">
       For MTFC, my team’s project focuses on coral reef degradation in tropical climates and the risks it poses to
       ecosystems, coastal communities, and global markets. Our proposal models how rising ocean temperatures,
@@ -80,21 +81,22 @@ This site was made with the help of https://www.w3schools.com
       data-driven recommendations to reduce environmental damage while protecting vulnerable communities and economies
       that depend on healthy coral reefs.
     </p>
-    <iframe
-            height="600"
-            src="docs/mtfc_project_proposal.pdf"
-            title="MTFC Project Proposal PDF"
-            width="100%">
-    </iframe>
-    <p>
-      <a href="docs/mtfc_project_proposal.pdf" target="_blank">Download PDF</a>
-    </p>
-  </section>
-  <div class="site-footer">
-    <div class="container">
-      <p class="small muted">Corey Lu • Built with HTML & CSS</p>
+
+    <div class="doc-frame">
+      <iframe src="docs/mtfc_project_proposal.pdf" title="MTFC Project Proposal PDF"></iframe>
+      <div class="doc-actions">
+        <a class="btn-link" href="docs/mtfc_project_proposal.pdf" target="_blank" rel="noopener">Open / Download PDF</a>
+      </div>
     </div>
   </div>
-</main>
+
+</div>
+
+<div class="site-footer">
+  <div class="container">
+    <p class="small muted">Corey Lu &bull; Built with HTML &amp; CSS</p>
+  </div>
+</div>
+
 </body>
 </html>

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-body {
-    font-family: "Hepta Slab", serif;
-}
+/* ==============================
+   RESET & BASE
+   ============================== */
 
 /* Layout foundation (inspired by W3Schools: Box Sizing, Responsive Web Design, Flexbox/Grid) */
 *,
@@ -10,6 +10,22 @@ body {
 *::after {
     box-sizing: border-box; /* https://www.w3schools.com/css/css3_box-sizing.asp */
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+body {
+    font-family: "Hepta Slab", serif;
+}
+
+/* ==============================
+   CSS VARIABLES
+   ============================== */
 
 :root {
     --bg: #ffffff;
@@ -35,24 +51,9 @@ body {
     --shadow-md: 0 4px 14px rgba(0, 0, 0, .08);
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.6;
-}
-
-/* Container and flow spacing (https://www.w3schools.com/howto/howto_css_center-website.asp) */
-.container {
-    margin-top: var(--space-lg);
-    width: min(1100px, 92%);
-    margin-inline: auto;
-}
-
-.flow > * + * {
-    margin-top: var(--space-lg);
-}
+/* ==============================
+   NAVIGATION
+   ============================== */
 
 /* Top navigation: sticky and responsive (https://www.w3schools.com/howto/howto_js_navbar_sticky.asp) */
 .top-nav {
@@ -88,7 +89,10 @@ html, body {
     font-weight: 700;
 }
 
-/* Hero section */
+/* ==============================
+   HERO SECTION
+   ============================== */
+
 .hero {
     background: linear-gradient(180deg, #f5f7ff, #ffffff);
     border-bottom: 1px solid var(--border);
@@ -127,6 +131,45 @@ html, body {
     box-shadow: var(--shadow-md);
 }
 
+/* ==============================
+   LAYOUT UTILITIES
+   ============================== */
+
+/* Container and flow spacing (https://www.w3schools.com/howto/howto_css_center-website.asp) */
+.container {
+    margin-top: var(--space-lg);
+    width: min(1100px, 92%);
+    margin-inline: auto;
+}
+
+.flow > * + * {
+    margin-top: var(--space-lg);
+}
+
+/* Grid utilities */
+.grid-two {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.gap-lg {
+    gap: var(--space-lg);
+}
+
+.align-start {
+    align-items: start;
+}
+
+@media (min-width: 840px) {
+    .grid-two {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==============================
+   CARDS, MEDIA, AND PHOTO GALLERY
+   ============================== */
+
 /* Cards and content blocks */
 .card {
     background: var(--surface);
@@ -162,20 +205,6 @@ html, body {
     color: var(--muted);
 }
 
-/* Grid utilities */
-.grid-two {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.gap-lg {
-    gap: var(--space-lg);
-}
-
-.align-start {
-    align-items: start;
-}
-
 /* Photo gallery using CSS Grid (https://www.w3schools.com/css/css_grid.asp) */
 .photo-grid {
     display: grid;
@@ -193,29 +222,7 @@ html, body {
     display: block;
 }
 
-/* Footer */
-.site-footer {
-    margin-top: var(--space-xl);
-    padding: var(--space-lg) 0;
-    border-top: 1px solid var(--border);
-    background: #fafafa;
-}
-
-/* Text helpers */
-.small {
-    font-size: .925rem;
-}
-
-.muted {
-    color: var(--muted);
-}
-
-/* Responsive adjustments (https://www.w3schools.com/css/css_rwd_mediaqueries.asp) */
 @media (min-width: 840px) {
-    .grid-two {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .photo-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -227,15 +234,18 @@ html, body {
     }
 }
 
+/* ==============================
+   COURSE PAGE, DESCRIPTION, ASSIGNMENT, AND IFRAME STYLES
+   ============================== */
+
 .course-page {
-
-
+    padding: 2.5rem 0;
+    margin: var(--space-lg) auto;
 }
 
 .course-description {
-    margin-bottom: var(--space-xl);
+    margin: 0 auto 2.5rem;
     width: min(900px, 92%);
-    margin: var(--space-xl) auto;
 }
 
 .course-description h1 {
@@ -250,13 +260,13 @@ html, body {
 }
 
 .assignment {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: var(--space-lg);
-    box-shadow: var(--shadow-sm);
     width: min(900px, 92%);
-    margin: var(--space-xl) auto;
+    margin: 0 auto 2.5rem;
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 14px;
+    padding: 1.6rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
 }
 
 .assignment + .assignment {
@@ -270,14 +280,15 @@ html, body {
 
 .assignment-description {
     margin: 0 0 var(--space);
-    color: var(--muted);
+    color: #555;
+    max-width: 80ch;
 }
 
 .assignment iframe {
     width: 100%;
     height: 600px;
-    border: 1px solid var(--border);
-    border-radius: calc(var(--radius) - 4px);
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
     background: #fff;
     box-shadow: var(--shadow-sm);
 }
@@ -292,16 +303,167 @@ html, body {
     text-decoration: underline;
 }
 
+.assignment a.btn-link,
+.assignment a.btn-link:visited,
+.assignment a.btn-link:hover,
+.assignment a.btn-link:active,
+.assignment a.btn-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* PDF frames */
+.doc-frame {
+    margin-top: 1rem;
+}
+
+.doc-frame iframe {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.doc-actions {
+    margin-top: 0.7rem;
+}
+
+/* ==============================
+   BUTTON STYLE LINKS
+   ============================== */
+
+/* Button-style links (won't affect index unless you use .btn-link there) */
+.btn-link {
+    display: inline-block;
+    background: #0077b6;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+
+.btn-link:visited,
+.btn-link:hover,
+.btn-link:active,
+.btn-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+.btn-link:hover {
+    filter: brightness(0.95);
+}
+
+.btn-small {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+/* ==============================
+   SLIDESHOW (Spanish memes)
+   ============================== */
+
+.slideshow {
+    margin-top: 1rem;
+}
+
+.slideshow-frame {
+    position: relative;
+    width: 100%;
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 480px;
+    object-fit: contain;
+    background: #fff;
+}
+
+.slide.is-active {
+    display: block;
+}
+
+.slideshow-controls {
+    margin-top: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.slideshow-dots {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.slideshow-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d0d7de;
+    text-decoration: none;
+}
+
+.slideshow-dots .dot.is-active {
+    background: #0077b6;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.site-footer {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg) 0;
+    border-top: 1px solid var(--border);
+    background: #fafafa;
+}
+
+/* ==============================
+   TEXT HELPERS
+   ============================== */
+
+.small {
+    font-size: .925rem;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* ==============================
+   RESPONSIVE ADJUSTMENTS
+   ============================== */
+
 @media (max-width: 600px) {
     .course-page {
         margin: var(--space-lg) auto;
+        padding: 2.5rem 0;
     }
 
     .assignment {
-        padding: var(--space);
+        padding: 1rem;
     }
 
     .assignment iframe {
+        height: 420px;
+    }
+
+    .slide {
+        height: 360px;
+    }
+
+    .doc-frame iframe {
         height: 420px;
     }
 }
