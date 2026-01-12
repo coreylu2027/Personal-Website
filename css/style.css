@@ -123,6 +123,10 @@ body {
     margin-inline: auto;
 }
 
+.container.top {
+    margin-top: 0
+}
+
 .flow > * + * {
     margin-top: var(--space-lg);
 }
@@ -214,6 +218,8 @@ body {
 .course-page {
     padding: 2.5rem 0;
     margin: var(--space-lg) auto;
+    margin-top: 0;
+    background: linear-gradient(180deg, #f5f7ff, #ffffff);
 }
 
 .course-description {
