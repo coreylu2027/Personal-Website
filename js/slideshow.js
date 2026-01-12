@@ -1,3 +1,4 @@
+// https://www.w3schools.com/howto/howto_js_slideshow.asp
 (function () {
     function Slideshow(rootId, options) {
         var root = document.getElementById(rootId);
