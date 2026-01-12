@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-/* ==============================
-   RESET & BASE
-   ============================== */
-
 /* Layout foundation (inspired by W3Schools: Box Sizing, Responsive Web Design, Flexbox/Grid) */
 *,
 *::before,
@@ -23,9 +19,6 @@ body {
     font-family: "Hepta Slab", serif;
 }
 
-/* ==============================
-   CSS VARIABLES
-   ============================== */
 
 :root {
     --bg: #ffffff;
@@ -50,10 +43,6 @@ body {
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, .06);
     --shadow-md: 0 4px 14px rgba(0, 0, 0, .08);
 }
-
-/* ==============================
-   NAVIGATION
-   ============================== */
 
 /* Top navigation: sticky and responsive (https://www.w3schools.com/howto/howto_js_navbar_sticky.asp) */
 .top-nav {
@@ -88,10 +77,6 @@ body {
     color: #ffffff;
     font-weight: 700;
 }
-
-/* ==============================
-   HERO SECTION
-   ============================== */
 
 .hero {
     background: linear-gradient(180deg, #f5f7ff, #ffffff);
@@ -131,10 +116,6 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-/* ==============================
-   LAYOUT UTILITIES
-   ============================== */
-
 /* Container and flow spacing (https://www.w3schools.com/howto/howto_css_center-website.asp) */
 .container {
     margin-top: var(--space-lg);
@@ -165,10 +146,6 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 }
-
-/* ==============================
-   CARDS, MEDIA, AND PHOTO GALLERY
-   ============================== */
 
 /* Cards and content blocks */
 .card {
@@ -233,10 +210,6 @@ body {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
-/* ==============================
-   COURSE PAGE, DESCRIPTION, ASSIGNMENT, AND IFRAME STYLES
-   ============================== */
 
 .course-page {
     padding: 2.5rem 0;
@@ -326,7 +299,7 @@ body {
 }
 .doc-frame img {
     width: 100%;
-    height: auto;           /* ← key line */
+    height: auto;
     display: block;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -335,11 +308,7 @@ body {
     margin-top: 0.7rem;
 }
 
-/* ==============================
-   BUTTON STYLE LINKS
-   ============================== */
-
-/* Button-style links (won't affect index unless you use .btn-link there) */
+/* Button-style links */
 .btn-link {
     display: inline-block;
     background: #0077b6;
@@ -351,6 +320,9 @@ body {
     font-size: 0.95rem;
 }
 
+.btn-link.github {
+    background: #6cc644
+}
 
 .btn-link:visited,
 .btn-link:hover,
@@ -368,9 +340,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* ==============================
-   SLIDESHOW (Spanish memes)
-   ============================== */
+/* https://www.w3schools.com/howto/howto_js_slideshow.asp */
 
 .slideshow {
     margin-top: 1rem;
@@ -424,20 +394,12 @@ body {
     background: #0077b6;
 }
 
-/* ==============================
-   FOOTER
-   ============================== */
-
 .site-footer {
     margin-top: var(--space-xl);
     padding: var(--space-lg) 0;
     border-top: 1px solid var(--border);
     background: #fafafa;
 }
-
-/* ==============================
-   TEXT HELPERS
-   ============================== */
 
 .small {
     font-size: .925rem;
@@ -446,10 +408,6 @@ body {
 .muted {
     color: var(--muted);
 }
-
-/* ==============================
-   RESPONSIVE ADJUSTMENTS
-   ============================== */
 
 @media (max-width: 600px) {
     .course-page {
