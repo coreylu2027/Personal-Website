@@ -58,21 +58,44 @@
   </div>
 
   <div class="assignment">
-    <h2>Dynamics Lab</h2>
+    <h2>Independent CS Project – MAMS Schedule Creator</h2>
     <p class="assignment-description">
-      This dynamics lab investigated Newton’s Second Law by determining the force produced by a fan in a modified
-      Atwood’s machine. By transferring mass between the cart and the hanging weight while keeping the total system mass
-      constant, we measured how acceleration changed with hanging mass and tested whether the relationship was linear.
-      Using free-body diagrams, experimental data, and a best-fit line, we compared theoretical and experimental results
-      to evaluate the fan’s force and identify sources of error such as friction and thrust variability.
+      Because I have taken AP CS A in the past, which covers the object-oriented programming concepts in Java, I am also
+      doing an independent CS project. I have decided to automate the scheduling process at MAMS. Currently, the schedule
+      is manually created in Excel, having to balance all of the different schedule constraints and customization
+      required. I am working on an app that uses an algorithm to generate the schedule each day based on different
+      requests and templates.
+    </p>
+    <p class="assignment-description">
+      Firstly, there is a Google Form where teachers can input any requests and constraints they have. The two types
+      currently implemented are “All School” and “Avoid”. An all school request is used for tests, project work time, or
+      any other events where the whole school meets at the same time. An avoid request is used so that a teacher won’t
+      have any classes during that period of time.
+    </p>
+    <p class="assignment-description">
+      Then, using Latin square formulas, a random schedule that meets all the constraints is generated. The schedule is
+      then saved as an object. The data-structure was designed to be as customizable as possible. The data-structure can
+      support any number of sections or as many classes as you want. The schedule is generated around templates, which
+      are common class schedules that repeat.
+    </p>
+    <p class="assignment-description">
+      There is also an editor that allows you to change certain classes, change times, or add blocks if needed. This was
+      built with the Java Swing library. The editor also allows you to set any classes to OPEN. If generate is used
+      afterward, the OPEN blocks are filled in with the missing classes if possible.
+    </p>
+    <p class="assignment-description">
+      Finally, an HTML file is outputted using Java PrintWriter. The HTML file is generated based on the Day object and
+      there is a corresponding CSS style file for the table formatting. This project is still in progress, but I am
+      hoping to finish it by the end of C-term. It is my hope that this will help Mass Academy create the weekly
+      schedules easier, rather than editing an Excel Spreadsheet.
     </p>
 
-    <div class="doc-frame">
-      <iframe src="docs/dynamics_lab.pdf" title="Dynamics Lab PDF"></iframe>
-      <div class="doc-actions">
-        <a class="btn-link" href="docs/dynamics_lab.pdf" rel="noopener" target="_blank">Open / Download PDF</a>
-      </div>
+    <div class="doc-frame screenshot-gallery">
+      <img src="images/csv_requests.png" alt="Screenshot of the requests csv file">
+      <img src="images/html_output.png" alt="The html output table of a weekly schedule">
+      <img src="images/week_editor.png" alt="The editor which allows you to customize a day">
     </div>
+
   </div>
 
 </div>

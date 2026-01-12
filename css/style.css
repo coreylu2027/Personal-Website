@@ -324,7 +324,13 @@ body {
     border-radius: 10px;
     background: #fff;
 }
-
+.doc-frame img {
+    width: 100%;
+    height: auto;           /* ← key line */
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
 .doc-actions {
     margin-top: 0.7rem;
 }
