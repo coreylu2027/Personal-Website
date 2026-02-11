@@ -38,13 +38,22 @@
 
   <div class="assignment">
     <h2>Overview</h2>
-    <p class="assignment-description">Short description with the major takeaway.</p>
+    <p class="assignment-description">
+      This project evaluates and improves the performance of FARSITE wildfire spread simulations
+      for New England forests. While wildfire modeling tools are widely used in the western United
+      States, they are rarely calibrated for the humid, deciduous-dominated ecosystems of the
+      Northeast. By validating simulations against documented wildfire perimeters and systematically
+      tuning fuel models and weather inputs, this study develops a regionally informed modeling
+      framework. Results demonstrate that fuel representation plays a larger role in improving
+      spatial agreement than meteorological scaling alone, and that wildfire activity in New England
+      exhibits a bimodal seasonal pattern driven by spring drying and fall drought conditions.
+    </p>
   </div>
 
   <div class="assignment-grid grid-two gap-lg align-stretch">
     <div class="assignment">
       <h2>Abstract</h2>
-      <p class="assignment-description scroll">Wildfire risk in the Northeastern United States has historically received less
+      <p class="assignment-description scroll abstract">Wildfire risk in the Northeastern United States has historically received less
         attention than in the West, yet recent evidence shows that large wildfires in eastern forests are increasing in
         frequency and severity. New England presents a distinct fire regime characterized by humid climates,
         deciduous-dominated fuels, strong seasonal variability, and dense wildland–urban interfaces, conditions that are
@@ -158,7 +167,7 @@
 
     <div class="assignment">
       <h2>Procedure (Detailed Description)</h2>
-      <p class="assignment-description scroll">
+      <p class="assignment-description scroll abstract">
         All data used in this study were obtained from open-source repositories. Spatial datasets describing fuels,
         vegetation, and topography were sourced from the LANDFIRE program. Meteorological inputs were obtained through
         the Open-Meteo API. Fire behavior and spread simulations were conducted using the FlamMap and FARSITE modeling
@@ -248,17 +257,122 @@
 
   <div class="assignment">
     <h2>Analysis</h2>
-    <p class="assignment-description">Data analysis summary will go here.</p>
+    <p class="assignment-description">
+      Baseline FARSITE simulations underpredicted total burned area and exhibited notable spatial
+      mismatches relative to observed fire perimeters. Sensitivity analyses revealed that wind speed
+      and fuel moisture strongly influenced total burn extent, but increases in burn area did not
+      consistently improve spatial agreement as measured by Intersection over Union (IoU).
+      Calibration of fuel model assignments produced the largest improvement in model performance,
+      increasing IoU agreement to 0.66 for the primary case study fire. Independent validation on a
+      separate wildfire confirmed that tuned fuel parameters generalized beyond a single event.
+      Seasonal simulations further identified two distinct peaks in modeled fire potential: a
+      dominant April–May peak associated with pre-green-up drying and a secondary fall peak linked
+      to drought conditions. These findings suggest that accurate fuel representation is more
+      critical than meteorological scaling alone for improving wildfire spread predictions in
+      New England.
+    </p>
   </div>
 
   <div class="assignment">
     <h2>Discussion &amp; Conclusion</h2>
-    <p class="assignment-description">Discussion, conclusions, and applications will go here.</p>
+    <p class="assignment-description">
+      This study demonstrates that wildfire modeling frameworks developed for western U.S.
+      ecosystems require regional calibration before application to New England landscapes.
+      Default LANDFIRE fuel models do not fully capture the structure and moisture dynamics of
+      northeastern mixed hardwood forests, leading to systematic underprediction of spread.
+      Fuel model tuning substantially improved spatial agreement, indicating that vegetation
+      representation is a primary source of modeling uncertainty in this region.
+
+      While meteorological adjustments influenced fire size, they did not significantly correct
+      spatial errors, highlighting the importance of accurate fuels over simple weather scaling.
+      The identification of a bimodal wildfire season aligns with historical fire occurrence
+      studies and suggests that regional fire-weather thresholds may need revision.
+
+      This calibrated modeling framework provides a foundation for improved wildfire hazard
+      assessment, seasonal risk forecasting, and future integration with burn probability or
+      machine-learning–based fire occurrence models tailored specifically to New England.
+    </p>
   </div>
 
   <div class="assignment">
     <h2>References (APA)</h2>
-    <p class="assignment-description">References list will go here.</p>
+    <div class="references">
+
+      <p class="apa-reference">
+        Carlson, A. R., Sebasky, M. E., Peters, M. P., & Radeloff, V. C. (2021).
+        The importance of small fires for wildfire hazard in urbanised landscapes of the northeastern US.
+        <i>International Journal of Wildland Fire, 30</i>(5), 307–321.
+        https://doi.org/10.1071/WF20186
+      </p>
+
+      <p class="apa-reference">
+        Conver, J. L., Falk, D. A., Yool, S. R., & Parmenter, R. R. (2018).
+        Modeling fire pathways in montane grassland-forest ecotones.
+        <i>Fire Ecology, 14</i>(1), 17–32.
+        https://doi.org/10.4996/fireecology.140117031
+      </p>
+
+      <p class="apa-reference">
+        Donovan, V. M., Crandall, R., Fill, J., & Wonkka, C. L. (2023).
+        Increasing large wildfire in the eastern United States.
+        <i>Geophysical Research Letters, 50</i>(24), e2023GL107051.
+        https://doi.org/10.1029/2023GL107051
+      </p>
+
+      <p class="apa-reference">
+        Finney, M. A. (2006).
+        An overview of FlamMap fire modeling capabilities.
+        In P. L. Andrews & B. W. Butler (Comps.),
+        <i>Fuels management—How to measure success: Conference proceedings</i>
+        (Proceedings RMRS-P-41, pp. 213–220).
+        U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station.
+        https://research.fs.usda.gov/treesearch/25948
+      </p>
+
+      <p class="apa-reference">
+        Ivey, M. A., Wonkka, C. L., Weidig, N. C., & Donovan, V. M. (2024).
+        Woody cover fuels large wildfire risk in the eastern US.
+        <i>Geophysical Research Letters, 51</i>(24), e2024GL110586.
+        https://doi.org/10.1029/2024GL110586
+      </p>
+
+      <p class="apa-reference">
+        Kreider, M. R., Higuera, P. E., Parks, S. A., Rice, W. L., White, N., & Larson, A. J. (2024).
+        Fire suppression makes wildfires more severe and accentuates impacts of climate change and fuel accumulation.
+        <i>Nature Communications, 15</i>(1), 1–11.
+        https://doi.org/10.1038/s41467-024-46702-0
+      </p>
+
+      <p class="apa-reference">
+        Pollina, J. B., Colle, B. A., & Charney, J. J. (2013).
+        Climatology and meteorological evolution of major wildfire events over the Northeast United States.
+        <i>Weather and Forecasting, 28</i>(1), 175–193.
+        https://doi.org/10.1175/WAF-D-12-00009.1
+      </p>
+
+      <p class="apa-reference">
+        Reilly, M. J., Norman, S. P., O’Brien, J. J., & Loudermilk, E. L. (2022).
+        Drivers and ecological impacts of a wildfire outbreak in the southern Appalachian Mountains after decades of fire exclusion.
+        <i>Forest Ecology and Management, 524</i>, 120500.
+        https://doi.org/10.1016/j.foreco.2022.120500
+      </p>
+
+      <p class="apa-reference">
+        Scott, J. H., & Burgan, R. E. (2005).
+        <i>Standard fire behavior fuel models: A comprehensive set for use with Rothermel’s surface fire spread model</i>
+        (RMRS-GTR-153).
+        U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station.
+        https://doi.org/10.2737/RMRS-GTR-153
+      </p>
+
+      <p class="apa-reference">
+        Vaz, R., Maia, P., Keizer, J., Fernandes, P., Pereira, S. C., & Carvalho, D. (2024).
+        An integrated framework for habitat restoration in fire-prone areas. Part 2 – fire hazard assessment of the different land management scenarios.
+        <i>International Journal of Wildland Fire, 33</i>(11).
+        https://doi.org/10.1071/WF24044
+      </p>
+
+    </div>
   </div>
 
   <div class="assignment">

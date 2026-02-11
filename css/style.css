@@ -310,6 +310,10 @@ body {
     padding-right: 0.5rem;
 }
 
+.assignment-description.scroll.abstract {
+    max-height: 360px;
+}
+
 .assignment iframe {
     width: 100%;
     height: 600px;
@@ -472,6 +476,13 @@ body {
 
 .muted {
     color: var(--muted);
+}
+
+.apa-reference {
+    margin-left: 0;
+    padding-left: 0.5in;
+    text-indent: -0.5in;
+    margin-bottom: 1em;
 }
 
 @media (max-width: 600px) {
