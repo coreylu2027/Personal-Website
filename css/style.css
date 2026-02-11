@@ -145,6 +145,10 @@ body {
     align-items: start;
 }
 
+.align-stretch {
+    align-items: stretch;
+}
+
 @media (min-width: 840px) {
     .grid-two {
         grid-template-columns: 1fr 1fr;
@@ -238,6 +242,21 @@ body {
     max-width: 75ch;
 }
 
+.project-title {
+    width: min(900px, 92%);
+    margin: 0 auto var(--space-lg);
+    padding: .85rem 1.1rem;
+    font-size: clamp(1.6rem, 1.8vw + 1.4rem, 2.6rem);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--clr-space-cadet);
+    background: linear-gradient(90deg, rgba(0, 121, 145, 0.14), rgba(188, 216, 193, 0));
+    border-left: 6px solid var(--clr-cerulean);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
 .assignment {
     width: min(900px, 92%);
     margin: 0 auto 2.5rem;
@@ -252,6 +271,28 @@ body {
     margin-top: var(--space-xl);
 }
 
+.assignment-grid {
+    width: min(900px, 92%);
+    margin: 0 auto 2.5rem;
+    display: grid;
+}
+
+.course-page.wide .course-description,
+.course-page.wide .project-title,
+.course-page.wide .assignment,
+.course-page.wide .assignment-grid {
+    width: min(1100px, 94%);
+}
+
+.assignment-grid .assignment {
+    width: 100%;
+    margin: 0;
+}
+
+.assignment-grid .assignment + .assignment {
+    margin-top: 0;
+}
+
 .assignment h2 {
     margin: 0 0 var(--space-sm);
     font-size: 1.5rem;
@@ -261,6 +302,12 @@ body {
     margin: 0 0 var(--space);
     color: #555;
     max-width: 80ch;
+}
+
+.assignment-description.scroll {
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
 }
 
 .assignment iframe {
@@ -302,6 +349,18 @@ body {
     border: 1px solid #d0d7de;
     border-radius: 10px;
     background: #fff;
+}
+
+.doc-frame.landscape {
+    position: relative;
+    width: 100%;
+    padding-top: 77.27%;
+}
+
+.doc-frame.landscape iframe {
+    position: absolute;
+    inset: 0;
+    height: 100%;
 }
 .doc-frame img {
     width: 100%;
