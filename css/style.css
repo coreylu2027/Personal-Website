@@ -190,6 +190,49 @@ body {
     color: var(--muted);
 }
 
+.service-entry {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space);
+    padding-top: var(--space);
+    border-top: 1px solid var(--border);
+}
+
+.service-entry:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.service-entry + .service-entry {
+    margin-top: var(--space-lg);
+}
+
+.service-entry h3 {
+    margin: 0 0 var(--space-xs);
+}
+
+.service-photos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space);
+}
+
+.service-photos .media__img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+@media (min-width: 760px) {
+    .service-entry {
+        grid-template-columns: 1.1fr .9fr;
+        align-items: start;
+    }
+
+    .service-photos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 /* Photo gallery using CSS Grid (https://www.w3schools.com/css/css_grid.asp) */
 .photo-grid {
     display: grid;
@@ -366,6 +409,19 @@ body {
     inset: 0;
     height: 100%;
 }
+
+.doc-frame.poster-portrait {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+}
+
+.doc-frame.poster-portrait iframe {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+}
+
 .doc-frame img {
     width: 100%;
     height: auto;
